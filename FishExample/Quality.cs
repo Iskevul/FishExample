@@ -38,7 +38,7 @@ namespace FishMonitoringConsole
 
             var time = DateTime.Now;
             var interval = new TimeSpan(0, timeInterval, 0);
-            foreach (var t in temperatureData.Split())
+            foreach (var t in temperatureData.Split(','))
             {
                 temperature.Add(time, Double.Parse(t));
                 time += interval;

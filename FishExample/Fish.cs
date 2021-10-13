@@ -21,8 +21,9 @@ namespace FishMonitoringConsole
         public double maxStoreTemp;
         public TimeSpan deathTime;
 
-        public FrozenFish(Quality q, double t, TimeSpan d) : base(q)
+        public FrozenFish(string n, Quality q, double t, TimeSpan d) : base(q)
         {
+            name = n;
             maxStoreTemp = t;
             deathTime = d;
         }
@@ -39,7 +40,7 @@ namespace FishMonitoringConsole
         public TimeSpan minDeathTime;
         public TimeSpan maxDeathTime;
 
-        public ChilledFish(Quality q, double t, TimeSpan d) : base(q)
+        public ChilledFish(string name, Quality q, double t, TimeSpan d) : base(q)
         { }
 
         public override bool isValid()
