@@ -9,6 +9,7 @@ namespace FishMonitoringConsole
         {
             Console.WriteLine("Content-Type: text/html \n\n");
             // temperature data
+            string name = "mentai";
             int interval = 10; //min
             string tempData = "-1, -2, -3, -6";
             //fish data
@@ -17,7 +18,7 @@ namespace FishMonitoringConsole
 
 
             var quality = new TempQuality(interval, tempData);
-            Fish mentai = new FrozenFish(quality, (double)maxTemp, new TimeSpan(0, maxTempTime, 0));
+            Fish mentai = new FrozenFish(name, quality, (double)maxTemp, new TimeSpan(0, maxTempTime, 0));
             Console.WriteLine(mentai.isValid());
 
             foreach (KeyValuePair<DateTime, double> q in quality)
