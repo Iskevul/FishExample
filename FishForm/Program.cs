@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 
@@ -10,7 +12,8 @@ namespace HtmlForm
     {
         static void Main(string[] args)
         {
-            string path = @"/home/iskan/form.html";
+            //string path = @"/home/iskan/form.html";
+            string path = ConfigurationManager.AppSettings["formPath"].ToString();
             //string path = @"C:\Users\User\source\repos\FishExample\FishForm\form.html";
             string html;
 
